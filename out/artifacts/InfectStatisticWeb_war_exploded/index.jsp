@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="Infectstatic.pojo.Province" %><%--
   Created by IntelliJ IDEA.
   User: 外星人
   Date: 2020/3/10
@@ -24,7 +25,9 @@
       var myEchart = echarts.init(document.querySelector('#container'));
        //↓↓实现请求接口
 
-
+<%
+            List<Province> provinces=(List)request.getAttribute("provinces");
+%>
 
 
 
@@ -42,7 +45,7 @@
           backgroundColor:'#c7dbff',
           tooltip:{
             formatter:function () {
-                return '地区：湖北<br/>确诊：100人<br/>治愈：12人<br/>死亡：56人<br/>'
+                return '地区:湖北<br/>确诊：100人<br/>治愈：12人<br/>死亡：56人<br/>'
             }
           },
           series:[

@@ -26,7 +26,7 @@
        //↓↓实现请求接口
 
 <%
-List<Province> provinces=(List)request.getAttribute("provinces");
+            List<Province> provinces=(List)request.getAttribute("provinces");
 %>
 
 
