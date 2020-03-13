@@ -19,9 +19,9 @@
   <script src="js/china.js"></script>
   <div style="background-color: azure">
   <div id="container1" style="width: 50%;height: 100%"></div>
-    <div id="container4" style="width: 50%;height: 100%;background-color: azure">
-    <div id="container2" style="width: 100%;height: 50%;background-color: azure"></div>
-    <div id="container3" style="width: 100%;height: 50%;background-color: azure"></div>
+    <div id="container4" style="width: 50%;height: 100%;background-color: #c7dbff">
+    <div id="container2" style="width: 100%;height: 50%;background-color: #c7dbff"></div>
+    <div id="container3" style="width: 100%;height: 50%;background-color: #c7dbff"></div>
     </div>
   </div>
   <script>
@@ -29,11 +29,7 @@
       var myEchart1 = echarts.init(document.querySelector('#container1'));
       var myEchart2=echarts.init(document.querySelector('#container2'));//显示治疗人数，死亡人数，感染人数走势
       var myEchart3=echarts.init(document.querySelector('#container3'));//显示治疗人数，死亡人数，感染人数占比
-       //↓↓实现请求接口
-<%
-            List<Province> provinces=(List)request.getAttribute("provinces");
-%>
-      //↑↑实现请求接口
+
       // 指定相关的配置项和数据
       myEchart1.setOption({
           title:{
@@ -45,7 +41,7 @@
           backgroundColor:'#c7dbff',
           visualMap: [    //需要后台数据
               {
-                  type: 'continuous', // continuous连续的 piecewise分段
+                  type: 'piecewise', // continuous连续的 piecewise分段
                   pieces: [
                       { gt: 10000 }, // (10000, Infinity]
                       { gt: 1000, lte: 9999 }, // (1000, 9999]
@@ -72,7 +68,7 @@
                   }
               }
           ],
-          //data:provinces
+          data:mydata
       })
       myEchart2.setOption({
           title: {
@@ -82,7 +78,7 @@
               trigger: 'axis'
           },
           legend: {
-              data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+              data: ['疑似感染人数', '确诊感染人数', '治愈人数', '死亡人数']
           },
           grid: {
               left: '3%',
@@ -105,34 +101,28 @@
           },
           series: [
               {
-                  name: '邮件营销',
+                  name: '疑似感染人数',
                   type: 'line',
                   stack: '总量',
                   data: [120, 132, 101, 134, 90, 230, 210]
               },
               {
-                  name: '联盟广告',
+                  name: '确诊感染人数',
                   type: 'line',
                   stack: '总量',
                   data: [220, 182, 191, 234, 290, 330, 310]
               },
               {
-                  name: '视频广告',
+                  name: '治愈人数',
                   type: 'line',
                   stack: '总量',
                   data: [150, 232, 201, 154, 190, 330, 410]
               },
               {
-                  name: '直接访问',
+                  name: '死亡人数',
                   type: 'line',
                   stack: '总量',
                   data: [320, 332, 301, 334, 390, 330, 320]
-              },
-              {
-                  name: '搜索引擎',
-                  type: 'line',
-                  stack: '总量',
-                  data: [820, 932, 901, 934, 1290, 1330, 1320]
               }
           ]
       })
@@ -144,11 +134,11 @@
         legend: {
             orient: 'vertical',
             left: 10,
-            data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+            data: ['疑似感染', '确诊感染', '治愈', '死亡']
         },
         series: [
             {
-                name: '访问来源',
+                name: '人员类型',
                 type: 'pie',
                 radius: ['50%', '70%'],
                 avoidLabelOverlap: false,
@@ -171,15 +161,38 @@
                     }
                 },
                 data: [
-                    {value: 335, name: '直接访问'},
-                    {value: 310, name: '邮件营销'},
-                    {value: 234, name: '联盟广告'},
-                    {value: 135, name: '视频广告'},
-                    {value: 1548, name: '搜索引擎'}
+                    {value: 335, name: '疑似感染'},
+                    {value: 310, name: '确诊感染'},
+                    {value: 234, name: '治愈'},
+                    {value: 135, name: '死亡'}
                 ]
             }
         ]
     })
+      myEchart1.on('click',function () {
+          alert("操你妈");
+      })
+      var mydata=new Array(0);
+      $.ajax({
+          type:"get",//类型选择post/get
+          async:true,//异步请求
+          url:"ProvinceServlet",//请求发送到servlet
+          data:{},
+          dataType:"json",
+          success:function (result) {
+              if(result){
+                  for(var i=0;i<result.length;i++){
+                      var data={};
+                      data["name"]=result[i].name;
+                      data["value"]=result[i].infectPeople;
+                      data["doubtPeople"]=result[i].doubtPeople;
+                      data["deadPeople"]=result[i].deadPeople;
+                      data["curePeople"]=result[i].curePeople;
+                      mydata.push(data);
+                  }
+              }
+          }
+      })
   </script>
   </body>
 </html>
