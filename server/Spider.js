@@ -1,4 +1,5 @@
 //node 请求
+//const superagent=require('superagent')
 const superagent=require('superagent')
 const cheerio=require('cheerio')
 const fs= require('fs')
