@@ -8,6 +8,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+
+
 <html>
   <head>
     <title>中国地图</title>
@@ -31,77 +34,87 @@
     </div>
   </div>
   <script>
-      // 基于准备好的dom，初始化echarts实例
-      var myEchart2=echarts.init(document.querySelector('#container2'));//显示治疗人数，死亡人数，感染人数走势
-      var myEchart3=echarts.init(document.querySelector('#container3'));//显示治疗人数，死亡人数，感染人数占比
-      var myEchart1 = echarts.init(document.querySelector('#container'));
-      var mydata=[];
-      // 指定相关的配置项和数据
-      $.ajax({
-          type:"post",//类型选择post/get
-          async:true,//异步请求
-          url:"ProvinceServlet",//请求发送到servlet
-          dataType:"json",
-          success:function (result) {
-              for(var i=0;i<result.length;i++){
-                  var d={};
-                  d["name"]=result[i].name;
-                  d["value"]=result[i].infectPeople;
-                  d["doubtPeople"]=result[i].doubtPeople;
-                  d["deadPeople"]=result[i].deadPeople;
-                  d["curePeople"]=result[i].curePeople;
-                  mydata.push(d);
-              }
+    // 基于准备好的dom，初始化echarts实例
+    var myEchart2=echarts.init(document.querySelector('#container2'));//显示治疗人数，死亡人数，感染人数走势
+    var myEchart3=echarts.init(document.querySelector('#container3'));//显示治疗人数，死亡人数，感染人数占比
+    var myEchart1 = echarts.init(document.querySelector('#container'));
+    fetch(`http://localhost:8066/api/data`)
+            .then(res => res.json()) // 把可读数据流转为json格式
+            .then(res => {
+             // console.log(res) // 获取到的疫情数据
+              var getListByCountryTypeService1 = res.getListByCountryTypeService1
+              // 将接口返回的数据进行处理 转为echarts认可的数据
+              var filterData = []
+              getListByCountryTypeService1.forEach(item => {
+                filterData.push({
+                  name:  item.provinceShortName,
+                  value: item.confirmedCount,
+                  deadCount: item.deadCount,
+                  curedCount: item.curedCount,
+                  doubtCount: item.suspectedCount
+                })
+              })
+              myEchart1.setOption({
+                title:{
+                  text:'全国实时疫情数据分布图',
+                  subtext:'',
+                  left:'center'
 
-          }
-      })
-      myEchart1.setOption({
-          title:{
-              text:'全国实时疫情数据分布图',
-              subtext:'',
-              left:'center'
-
-          },
-          backgroundColor:'#c7dbff',
-          visualMap: [    //需要后台数据
-              {
-                  type: 'piecewise', // continuous连续的 piecewise分段
-                  pieces: [
+                },
+                backgroundColor:'#c7dbff',
+                visualMap: [    //需要后台数据
+                  {
+                    type: 'piecewise', // continuous连续的 piecewise分段
+                    pieces: [
                       { gt: 10000 }, // (10000, Infinity]
                       { gt: 1000, lte: 9999 }, // (1000, 9999]
                       { gt: 100, lte: 999 }, // (100, 999]
                       { gt: 10, lte: 99 }, // (10, 99]
                       { gt: 0, lte: 9 } // (0, 9]
-                  ],
-                  inRange: {
+                    ],
+                    inRange: {
                       color: ['#fdebcf', '#f59e83', '#e55a4e', '#cb2a2f', '#811c24']
+                    }
                   }
-              }
-          ],
-          tooltip:{
-              formatter : function(params) {
-                  return  "地区:"+params.name
-                      +'<br/>'+"确诊人数:"+params.infectPeople
-                      +'<br/>'+"死亡人数"+params.deadPeople
-                      +'<br/>'+"治愈人数:"+params.curePeople
-                      +'<br/>'+"疑似患者人数:"+params.doubtPeople
-                      ;
-              }//数据格式化
-          },
-          series:[
-              {
-                  type:'map',
-                  map:'china',
-                  label:{
+                ],
+                tooltip:{
+                  formatter : function(params) {
+                    console.log(params,'formatter');
+                    return  "地区："+params.data.name+'<br/>'
+                            +"确诊："+params.value+"人"+'<br/>'
+                            +"治愈："+params.data.curedCount+"人"+'<br/>'
+                            +"死亡："+params.data.deadCount+"人"+'<br/>'
+                            +"疑似："+params.data.doubtCount+"人"
+
+                  }//数据格式化
+                },
+                series:[
+                  {
+                    type:'map',
+                    map:'china',
+                    label:{
                       show:true,
+                    },
+                    data: filterData
+                    //dataType:filterData
                   }
-              }
-          ],
-          data:mydata
-      })
-      myEchart1.on('click',function (params) {
-          alert(params.name);
-      })
+                ]
+              })
+            })
+
+    // 指定相关的配置项和数据
+    // var mydata=JSON.parse(filterData);
+   // console.log(filterData);
+    // var a=" ";
+//     console.log(a)
+// console.log(filterData.length)
+//     for(var i=0;i<34;i++){
+//       a=a+'{name:'+filterData[i].name+', value:'+filterData[i].value+'}'
+//       if(i!=filterData.length-1) a=a+','
+//     }
+//    console.log(a)
+
+
       myEchart2.setOption({
           title: {
               text: '折线图堆叠'

@@ -24,7 +24,6 @@ superagent
             console.log('数据写入成功')
         })
         console.log(dataObj)
-        console.log()
     })
 
     .catch(err=>{
