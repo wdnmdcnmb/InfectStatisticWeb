@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-    request.getRequestDispatcher("ProvinceServlet").forward(request, response);
+   // request.getRequestDispatcher("ProvinceServlet").forward(request, response);
 %>
 </body>
 </html>

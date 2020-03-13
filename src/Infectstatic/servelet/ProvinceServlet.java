@@ -2,6 +2,7 @@ package Infectstatic.servelet;
 
 import Infectstatic.dao.ProvinceDao;
 import Infectstatic.pojo.Province;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,13 +15,21 @@ import java.util.List;
 @WebServlet("/ProvinceServlet")
 public class ProvinceServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        ProvinceDao a = new ProvinceDao();
+        List<Province> provinces = a.list();
+        //System.out.println("123456");
+        ObjectMapper mapper = new ObjectMapper();
+        String json = mapper.writeValueAsString(provinces);
+        System.out.println(json);
+
+        response.setContentType("index.jsp; charset=utf-8");
+        response.getWriter().write(json);
+        System.out.println("end");
+
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProvinceDao a=new ProvinceDao();
-        List<Province> provinces= a.list();
-        request.setAttribute("provinces",provinces);
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        doPost(request, response);
     }
 }

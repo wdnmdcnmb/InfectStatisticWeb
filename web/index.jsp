@@ -17,8 +17,14 @@
   <!-- 引入 ECharts 文件 -->
   <script src="js/echarts.min.js"></script>
   <script src="js/china.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
   <div style="background-color: azure">
-  <div id="container1" style="width: 50%;height: 100%"></div>
+    <div id="container1" style="width: 50%;height: 100%">
+      <div style="width: 100%;height: 30%;background-color: #c7dbff">
+
+      </div>
+  <div  id="container" style="width: 100%;height: 70%"></div>
+    </div>
     <div id="container4" style="width: 50%;height: 100%;background-color: #c7dbff">
     <div id="container2" style="width: 100%;height: 50%;background-color: #c7dbff"></div>
     <div id="container3" style="width: 100%;height: 50%;background-color: #c7dbff"></div>
@@ -26,11 +32,30 @@
   </div>
   <script>
       // 基于准备好的dom，初始化echarts实例
-      var myEchart1 = echarts.init(document.querySelector('#container1'));
+      var myEchart1 = echarts.init(document.querySelector('#container'));
       var myEchart2=echarts.init(document.querySelector('#container2'));//显示治疗人数，死亡人数，感染人数走势
       var myEchart3=echarts.init(document.querySelector('#container3'));//显示治疗人数，死亡人数，感染人数占比
 
       // 指定相关的配置项和数据
+      $.ajax({
+          type:"post",//类型选择post/get
+          async:true,//异步请求
+          url:"ProvinceServlet",//请求发送到servlet
+          dataType:"json",
+          success:function (data) {
+              for(var i=0;i<data.length;i++){
+                  var mydata=[];
+                  var d={};
+                  d["name"]=data[i].name;
+                  d["value"]=data[i].infectPeople;
+                  d["doubtPeople"]=data[i].doubtPeople;
+                  d["deadPeople"]=data[i].deadPeople;
+                  d["curePeople"]=data[i].curePeople;
+                  mydata.push(data);
+              }
+          }
+      })
+      console.log(mydata);
       myEchart1.setOption({
           title:{
               text:'全国实时疫情数据分布图',
@@ -55,9 +80,14 @@
               }
           ],
           tooltip:{
-            formatter:function () {
-                return '地区:湖北<br/>确诊：100人<br/>治愈：12人<br/>死亡：56人<br/>'
-            }
+              formatter : function(params) {
+                  return  "地区:"+params.name
+                      +'<br/>'+"确诊人数:"+params.value
+                      +'<br/>'+"死亡人数+"+params['data'].deadPeople
+                      +'<br/>'+"治愈人数:"+params['data'].curePeople
+                      +'<br/>'+"疑似患者人数:"+params['data'].doubtPeople
+                      ;
+              }//数据格式化
           },
           series:[
               {
@@ -70,6 +100,7 @@
           ],
           data:mydata
       })
+
       myEchart2.setOption({
           title: {
               text: '折线图堆叠'
@@ -169,30 +200,11 @@
             }
         ]
     })
-      myEchart1.on('click',function () {
-          alert("操你妈");
+
+      myEchart1.on('click',function (params) {
+          alert(params.name);
       })
-      var mydata=new Array(0);
-      $.ajax({
-          type:"get",//类型选择post/get
-          async:true,//异步请求
-          url:"ProvinceServlet",//请求发送到servlet
-          data:{},
-          dataType:"json",
-          success:function (result) {
-              if(result){
-                  for(var i=0;i<result.length;i++){
-                      var data={};
-                      data["name"]=result[i].name;
-                      data["value"]=result[i].infectPeople;
-                      data["doubtPeople"]=result[i].doubtPeople;
-                      data["deadPeople"]=result[i].deadPeople;
-                      data["curePeople"]=result[i].curePeople;
-                      mydata.push(data);
-                  }
-              }
-          }
-      })
+
   </script>
   </body>
 </html>
