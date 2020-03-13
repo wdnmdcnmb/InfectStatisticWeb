@@ -15,6 +15,7 @@ superagent
         eval($getListByCountryTypeService1.replace(/window/g,'dataObj'))
         console.log(dataObj)
     })
+
     .catch(err=>{
         throw err
     })
