@@ -7,80 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a7b9a33-bf54-44be-bda6-92a3f908f4e9" name="默认更改列表" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1924595564">
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="1" />
-          <entry key="css" value="1" />
-          <entry key="js" value="2" />
-          <entry key="jsp" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="CSS" value="1" />
-          <entry key="JSP" value="3" />
-          <entry key="JavaScript" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="38" />
-          <entry key="jsp" value="1554" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="38" />
-          <entry key="JSP" value="1554" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="171" column="37" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/init.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -94,22 +24,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/web/css/indexdiv.css" />
-        <option value="$PROJECT_DIR$/web/China.jsp" />
-        <option value="$PROJECT_DIR$/web/Province.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -117,52 +31,8 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="197" />
-    <option name="y" value="116" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
   <component name="ProjectId" id="1Z18AEi30eYfpiD7Bg6fo731NrI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <hideEmptyPackages ProjectPane="false" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="infectstatic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InfectStatisticWeb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="infectstatic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InfectStatisticWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="infectstatic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InfectStatisticWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="infectstatic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InfectStatisticWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -176,40 +46,28 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.1988218" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.webservices" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\soft\test\InfectStatisticWeb\web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\github\InfectStatisticWeb\web\js" />
       <recent name="D:\soft\test\InfectStatisticWeb\web" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\soft\test\InfectStatisticWeb\web" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Tomcat Server.index.jsp (1)">
-    <configuration name="China.jsp" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/China.jsp">
+  <component name="RunManager" selected="Tomcat Server.index.jsp">
+    <configuration name="China.jsp" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:8080/China.jsp">
       <method v="2" />
     </configuration>
-    <configuration name="index.jsp" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/index.jsp">
+    <configuration name="index.jsp" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/index.jsp">
       <method v="2" />
     </configuration>
-    <configuration name="init.jsp" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:8080/InfectStatisticWeb_war_exploded/init.jsp">
+    <configuration name="init.jsp" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:8080/InfectStatisticWeb_war_exploded/init.jsp">
       <method v="2" />
     </configuration>
     <configuration name="China.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="false">
@@ -224,11 +82,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="China_jsp_infectstatic" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -251,7 +109,7 @@
         </option>
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+    <configuration name="Tomcat 9.0.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="11">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/InfectStatisticWeb_war_exploded" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -264,11 +122,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_31_infectstatic" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="54249" />
       </RunnerSettings>
@@ -354,11 +212,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="index_jsp_(1)_infectstatic_2" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -381,7 +239,7 @@
         </option>
       </method>
     </configuration>
-    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="11">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/InfectStatisticWeb_war_exploded/index.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -394,11 +252,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="index_jsp_infectstatic" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="3041" />
       </RunnerSettings>
@@ -484,11 +342,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="init_jsp_(2)_infectstatic" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -511,7 +369,7 @@
         </option>
       </method>
     </configuration>
-    <configuration name="init.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+    <configuration name="init.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.31" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="$APPLICATION_HOME_DIR$/jbr">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/InfectStatisticWeb_war_exploded/init.jsp" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -524,11 +382,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="init_jsp_infectstatic" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="55155" />
       </RunnerSettings>
@@ -604,13 +462,13 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.init.jsp" />
+      <item itemvalue="JavaScript Debug.China.jsp" />
+      <item itemvalue="JavaScript Debug.index.jsp" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
       <item itemvalue="Tomcat Server.init.jsp" />
       <item itemvalue="Tomcat Server.index.jsp" />
       <item itemvalue="Tomcat Server.init.jsp (2)" />
-      <item itemvalue="JavaScript Debug.China.jsp" />
       <item itemvalue="Tomcat Server.China.jsp" />
-      <item itemvalue="JavaScript Debug.index.jsp" />
       <item itemvalue="Tomcat Server.index.jsp (1)" />
     </list>
     <recent_temporary>
@@ -618,7 +476,6 @@
         <item itemvalue="Tomcat Server.index.jsp (1)" />
         <item itemvalue="JavaScript Debug.index.jsp" />
         <item itemvalue="Tomcat Server.China.jsp" />
-        <item itemvalue="JavaScript Debug.China.jsp" />
         <item itemvalue="Tomcat Server.init.jsp (2)" />
       </list>
     </recent_temporary>
@@ -632,16 +489,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -667,55 +514,12 @@
       <workItem from="1583997264103" duration="6172000" />
       <workItem from="1584017512928" duration="1102000" />
       <workItem from="1584074818952" duration="6752000" />
+      <workItem from="1584092377017" duration="862000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15630000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992248" visible="true" weight="0.26332623" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="设计器" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.5007752" side_tool="true" weight="0.2553305" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32952183" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32952183" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="JProfiler" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="调试" order="15" weight="0.32952183" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="调色板" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -727,18 +531,18 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="865" y="348" key="#BuildArtifactsBeforeRunChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1584015336986" />
-    <state x="891" y="330" width="993" height="683" key="#Project_Structure" timestamp="1584018142412">
+    <state x="891" y="330" width="993" height="683" key="#Project_Structure" timestamp="1584091922415">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="891" y="330" width="993" height="683" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1584018142412" />
+    <state x="891" y="330" width="993" height="683" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1584091922415" />
     <state x="677" y="201" key="#Tomcat_Server" timestamp="1583996606540">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="677" y="201" key="#Tomcat_Server/0.0.1920.1080@0.0.1920.1080" timestamp="1583996606540" />
-    <state x="719" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584018653881">
+    <state x="719" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584092614948">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="719" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584018653881" />
+    <state x="719" y="177" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584092614948" />
     <state x="1217" y="382" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1584017774510">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -747,58 +551,62 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="675" y="181" key="#index.jsp/0.0.1920.1080@0.0.1920.1080" timestamp="1583996678793" />
-    <state x="865" y="298" key="FileChooserDialogImpl" timestamp="1584018526466">
+    <state x="843" y="155" key="#init.jsp" timestamp="1584091913474">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="865" y="298" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1584018526466" />
-    <state width="917" height="271" key="GridCell.Tab.0.bottom" timestamp="1584018690428">
+    <state x="843" y="155" key="#init.jsp/0.0.1920.1080@0.0.1920.1080" timestamp="1584091913474" />
+    <state x="865" y="298" key="FileChooserDialogImpl" timestamp="1584092182284">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690428" />
-    <state width="917" height="271" key="GridCell.Tab.0.center" timestamp="1584018690427">
+    <state x="865" y="298" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1584092182284" />
+    <state width="1340" height="261" key="GridCell.Tab.0.bottom" timestamp="1584092349209">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690427" />
-    <state width="917" height="271" key="GridCell.Tab.0.left" timestamp="1584018690427">
+    <state width="1340" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349209" />
+    <state width="1340" height="261" key="GridCell.Tab.0.center" timestamp="1584092349209">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690427" />
-    <state width="917" height="271" key="GridCell.Tab.0.right" timestamp="1584018690428">
+    <state width="1340" height="261" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349209" />
+    <state width="1340" height="261" key="GridCell.Tab.0.left" timestamp="1584092349209">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690428" />
-    <state width="917" height="271" key="GridCell.Tab.1.bottom" timestamp="1584018690361">
+    <state width="1340" height="261" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349209" />
+    <state width="1340" height="261" key="GridCell.Tab.0.right" timestamp="1584092349209">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690361" />
-    <state width="917" height="271" key="GridCell.Tab.1.center" timestamp="1584018690361">
+    <state width="1340" height="261" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349209" />
+    <state width="917" height="271" key="GridCell.Tab.1.bottom" timestamp="1584092349207">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690361" />
-    <state width="917" height="271" key="GridCell.Tab.1.left" timestamp="1584018690361">
+    <state width="917" height="271" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349207" />
+    <state width="917" height="271" key="GridCell.Tab.1.center" timestamp="1584092349207">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690361" />
-    <state width="917" height="271" key="GridCell.Tab.1.right" timestamp="1584018690361">
+    <state width="917" height="271" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349207" />
+    <state width="917" height="271" key="GridCell.Tab.1.left" timestamp="1584092349207">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690361" />
-    <state width="917" height="271" key="GridCell.Tab.2.bottom" timestamp="1584018690361">
+    <state width="917" height="271" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349207" />
+    <state width="917" height="271" key="GridCell.Tab.1.right" timestamp="1584092349207">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690361" />
-    <state width="917" height="271" key="GridCell.Tab.2.center" timestamp="1584018690361">
+    <state width="917" height="271" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349207" />
+    <state width="917" height="271" key="GridCell.Tab.2.bottom" timestamp="1584092349207">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690361" />
-    <state width="917" height="271" key="GridCell.Tab.2.left" timestamp="1584018690361">
+    <state width="917" height="271" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349207" />
+    <state width="917" height="271" key="GridCell.Tab.2.center" timestamp="1584092349207">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690361" />
-    <state width="917" height="271" key="GridCell.Tab.2.right" timestamp="1584018690361">
+    <state width="917" height="271" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349207" />
+    <state width="917" height="271" key="GridCell.Tab.2.left" timestamp="1584092349207">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="917" height="271" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584018690361" />
+    <state width="917" height="271" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349207" />
+    <state width="917" height="271" key="GridCell.Tab.2.right" timestamp="1584092349207">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="917" height="271" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584092349207" />
     <state width="917" height="262" key="GridCell.Tab.3.bottom" timestamp="1584017459710">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -819,10 +627,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="308" y="229" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1584016872079" />
-    <state x="580" y="354" key="com.intellij.ide.util.TipDialog" timestamp="1584017514818">
+    <state x="580" y="354" key="com.intellij.ide.util.TipDialog" timestamp="1584092377340">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="580" y="354" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584017514818" />
+    <state x="580" y="354" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584092377340" />
     <state x="833" y="156" key="com.intellij.javaee.view.ServerArtifactsDialog" timestamp="1584018070528">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -831,168 +639,5 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="834" y="129" width="748" height="801" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584016500823" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/production/InfectStatisticWeb/Infectstatic/pojo/Province.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/echarts.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/china.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Infectstatic/dao/ProvinceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/China.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3599">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Province.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/indexdiv.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Infectstatic/pojo/Province.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Infectstatic/servelet/ProvinceServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/init.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="171" column="37" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>InfectStatisticWeb:war exploded</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.1988218" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.1988218" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.1988218" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.1988218" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>InfectStatisticWeb</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.1988218" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.1988218" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
