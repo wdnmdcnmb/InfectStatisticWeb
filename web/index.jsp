@@ -22,12 +22,7 @@
   <script src="js/china.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
   <div style="background-color: azure">
-    <div id="container1" style="width: 50%;height: 100%">
-      <div style="width: 100%;height: 30%;background-color: #c7dbff">
-
-      </div>
-  <div  id="container" style="width: 100%;height: 70%"></div>
-    </div>
+  <div  id="container" style="width:50%;height: 100%;float: left"></div>
     <div id="container4" style="width: 50%;height: 100%;background-color: #c7dbff">
     <div id="container2" style="width: 100%;height: 50%;background-color: #c7dbff"></div>
     <div id="container3" style="width: 100%;height: 50%;background-color: #c7dbff"></div>
@@ -45,14 +40,22 @@
               var getListByCountryTypeService1 = res.getListByCountryTypeService1
               // 将接口返回的数据进行处理 转为echarts认可的数据
               var filterData = []
+              var sumcure=0;
+              var sumdead=0;
+              var sumdoubt=0;
+              var suminfect=0;
               getListByCountryTypeService1.forEach(item => {
                 filterData.push({
                   name:  item.provinceShortName,
                   value: item.confirmedCount,
                   deadCount: item.deadCount,
                   curedCount: item.curedCount,
-                  doubtCount: item.suspectedCount
+                  doubtCount: item.suspectedCount,
                 })
+                sumcure+=item.curedCount;
+                sumdead+=item.deadCount;
+                suminfect+=item.confirmedCount;
+                sumdoubt+=item.suspectedCount;
               })
               myEchart1.setOption({
                 title:{
@@ -100,120 +103,108 @@
                   }
                 ]
               })
-            })
-
-    // 指定相关的配置项和数据
-    // var mydata=JSON.parse(filterData);
-   // console.log(filterData);
-    // var a=" ";
-//     console.log(a)
-// console.log(filterData.length)
-//     for(var i=0;i<34;i++){
-//       a=a+'{name:'+filterData[i].name+', value:'+filterData[i].value+'}'
-//       if(i!=filterData.length-1) a=a+','
-//     }
-//    console.log(a)
-
-
-      myEchart2.setOption({
-          title: {
-              text: '折线图堆叠'
-          },
-          tooltip: {
-              trigger: 'axis'
-          },
-          legend: {
-              data: ['疑似感染人数', '确诊感染人数', '治愈人数', '死亡人数']
-          },
-          grid: {
-              left: '3%',
-              right: '4%',
-              bottom: '3%',
-              containLabel: true
-          },
-          toolbox: {
-              feature: {
-                  saveAsImage: {}
-              }
-          },
-          xAxis: {
-              type: 'category',
-              boundaryGap: false,
-              data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-          },
-          yAxis: {
-              type: 'value'
-          },
-          series: [
-              {
-                  name: '疑似感染人数',
-                  type: 'line',
-                  stack: '总量',
-                  data: [120, 132, 101, 134, 90, 230, 210]
-              },
-              {
-                  name: '确诊感染人数',
-                  type: 'line',
-                  stack: '总量',
-                  data: [220, 182, 191, 234, 290, 330, 310]
-              },
-              {
-                  name: '治愈人数',
-                  type: 'line',
-                  stack: '总量',
-                  data: [150, 232, 201, 154, 190, 330, 410]
-              },
-              {
-                  name: '死亡人数',
-                  type: 'line',
-                  stack: '总量',
-                  data: [320, 332, 301, 334, 390, 330, 320]
-              }
-          ]
-      })
-    myEchart3.setOption({
-        tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b}: {c} ({d}%)'
-        },
-        legend: {
-            orient: 'vertical',
-            left: 10,
-            data: ['疑似感染', '确诊感染', '治愈', '死亡']
-        },
-        series: [
-            {
-                name: '人员类型',
-                type: 'pie',
-                radius: ['50%', '70%'],
-                avoidLabelOverlap: false,
-                label: {
-                    normal: {
+              myEchart3.setOption({
+                tooltip: {
+                  trigger: 'item',
+                  formatter: '{a} <br/>{b}: {c} ({d}%)'
+                },
+                legend: {
+                  orient: 'vertical',
+                  left: 10,
+                  data: ['疑似感染', '确诊感染', '治愈', '死亡']
+                },
+                series: [
+                  {
+                    name: '人员类型',
+                    type: 'pie',
+                    radius: ['50%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                      normal: {
                         show: false,
                         position: 'center'
-                    },
-                    emphasis: {
+                      },
+                      emphasis: {
                         show: true,
                         textStyle: {
-                            fontSize: '30',
-                            fontWeight: 'bold'
+                          fontSize: '30',
+                          fontWeight: 'bold'
                         }
-                    }
-                },
-                labelLine: {
-                    normal: {
+                      }
+                    },
+                    labelLine: {
+                      normal: {
                         show: false
-                    }
-                },
-                data: [
-                    {value: 335, name: '疑似感染'},
-                    {value: 310, name: '确诊感染'},
-                    {value: 234, name: '治愈'},
-                    {value: 135, name: '死亡'}
+                      }
+                    },
+                    data: [
+                      {value: sumdoubt, name: '疑似感染'},
+                      {value: suminfect, name: '确诊感染'},
+                      {value: sumcure, name: '治愈'},
+                      {value: sumdead, name: '死亡'}
+                    ]
+                  }
                 ]
-            }
-        ]
-    })
+              })
+              myEchart2.setOption({
+                title: {
+                  text: '折线图堆叠'
+                },
+                tooltip: {
+                  trigger: 'axis'
+                },
+                legend: {
+                  data: ['疑似感染人数', '确诊感染人数', '治愈人数', '死亡人数']
+                },
+                grid: {
+                  left: '3%',
+                  right: '4%',
+                  bottom: '3%',
+                  containLabel: true
+                },
+                toolbox: {
+                  feature: {
+                    saveAsImage: {}
+                  }
+                },
+                xAxis: {
+                  type: 'category',
+                  boundaryGap: false,
+                  data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                },
+                yAxis: {
+                  type: 'value'
+                },
+                series: [
+                  {
+                    name: '疑似感染人数',
+                    type: 'line',
+                    stack: '总量',
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                  },
+                  {
+                    name: '确诊感染人数',
+                    type: 'line',
+                    stack: '总量',
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                  },
+                  {
+                    name: '治愈人数',
+                    type: 'line',
+                    stack: '总量',
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                  },
+                  {
+                    name: '死亡人数',
+                    type: 'line',
+                    stack: '总量',
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                  }
+                ]
+              })
+            })
+
+
 
 
   </script>
