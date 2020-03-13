@@ -20,11 +20,11 @@ public class ProvinceServlet extends HttpServlet {
         //System.out.println("123456");
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(provinces);
-        System.out.println(json);
+       // System.out.println(json);
 
         response.setContentType("index.jsp; charset=utf-8");
         response.getWriter().write(json);
-        System.out.println("end");
+       // System.out.println("end");
 
 
     }

@@ -8,7 +8,7 @@ import java.util.List;
 public class ProvinceDao {
     public List<Province> list(){
         List<Province> provinces=new ArrayList<>();
-            for(int i=0;i<31;i++){
+            for(int i=0;i<35;i++){
                 Province a=new Province();
                 a.name="ss";
                 a.infectPeople=20;
