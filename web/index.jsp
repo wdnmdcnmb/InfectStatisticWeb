@@ -33,6 +33,8 @@
     var myEchart2=echarts.init(document.querySelector('#container2'));//显示治疗人数，死亡人数，感染人数走势
     var myEchart3=echarts.init(document.querySelector('#container3'));//显示治疗人数，死亡人数，感染人数占比
     var myEchart1 = echarts.init(document.querySelector('#container'));
+
+
     fetch(`http://localhost:8066/api/data`)
             .then(res => res.json()) // 把可读数据流转为json格式
             .then(res => {
@@ -103,6 +105,8 @@
                   }
                 ]
               })
+
+
               myEchart3.setOption({
                 tooltip: {
                   trigger: 'item',
@@ -146,6 +150,8 @@
                   }
                 ]
               })
+
+
               myEchart2.setOption({
                 title: {
                   text: '折线图堆叠'
