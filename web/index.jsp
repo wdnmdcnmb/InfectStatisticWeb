@@ -15,6 +15,20 @@
   <head>
     <title>中国地图</title>
     <link href="css/indexdiv.css" rel="stylesheet" type="text/css" />
+    <style>
+      .p1{
+        font-size: 27px;color: burlywood;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
+      }
+      .p2{
+        font-size: 27px;color: crimson;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
+      }
+      .p3{
+        font-size: 27px;color: darkgoldenrod;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
+      }
+      .p4{
+        font-size: 27px;color: darksalmon;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
+      }
+    </style>
   </head>
   <body>
   <!-- 引入 ECharts 文件 -->
@@ -22,7 +36,25 @@
   <script src="js/china.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
   <div style="background-color: azure">
-  <div  id="container" style="width:50%;height: 100%;float: left"></div>
+    <div style="width:50%;height: 100%;float: left;background-color: #c7dbff">
+      <div style="width:100%;height: 15%">
+        <table style="margin:0 auto;background-color: blanchedalmond">
+          <tr>
+            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: burlywood">现有确诊</p></td>
+            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: crimson">现有疑似</p></td>
+            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: darkgoldenrod">死亡人数</p></td>
+            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: darksalmon">治愈人数</p></td>
+          </tr>
+          <tr>
+            <td><p id="p1" class="p1">123</p></td>
+            <td><p id="p2" class="p2">123</p></td>
+            <td><p id="p3" class="p3">123</p></td>
+            <td><p id="p4" class="p4">123</p></td>
+          </tr>
+        </table>
+      </div>
+      <div  id="container" style="width:100%;height: 85%;float: left"></div>
+    </div>
     <div id="container4" style="width: 50%;height: 100%;background-color: #c7dbff">
     <div id="container2" style="width: 100%;height: 50%;background-color: #c7dbff"></div>
     <div id="container3" style="width: 100%;height: 50%;background-color: #c7dbff"></div>
@@ -33,17 +65,20 @@
     var myEchart2=echarts.init(document.querySelector('#container2'));//显示治疗人数，死亡人数，感染人数走势
     var myEchart3=echarts.init(document.querySelector('#container3'));//显示治疗人数，死亡人数，感染人数占比
     var myEchart1 = echarts.init(document.querySelector('#container'));
+    var hubeidate=[];var hubeiconfirmCount=[];var hubeicuredCount=[];var hubeideadCount=[];
     fetch(`http://localhost:8066/api/data`)
             .then(res => res.json()) // 把可读数据流转为json格式
             .then(res => {
              // console.log(res) // 获取到的疫情数据
               var getListByCountryTypeService1 = res.getListByCountryTypeService1
+              var gethubei=res.gethubei
               // 将接口返回的数据进行处理 转为echarts认可的数据
               var filterData = []
               var sumcure=0;
               var sumdead=0;
               var sumdoubt=0;
               var suminfect=0;
+              var x=0;
               getListByCountryTypeService1.forEach(item => {
                 filterData.push({
                   name:  item.provinceShortName,
@@ -51,12 +86,24 @@
                   deadCount: item.deadCount,
                   curedCount: item.curedCount,
                   doubtCount: item.suspectedCount,
+                  count:x
                 })
+                x++;
                 sumcure+=item.curedCount;
                 sumdead+=item.deadCount;
                 suminfect+=item.confirmedCount;
                 sumdoubt+=item.suspectedCount;
               })
+              gethubei.forEach(item=>{
+                hubeidate.push(item.dateId)
+                hubeideadCount.push(item.deadCount)
+                hubeicuredCount.push(item.curedCount)
+                hubeiconfirmCount.push(item.confirmedCount)
+              })
+              document.getElementById("p1").innerHTML=suminfect;
+             document.getElementById("p2").innerHTML=sumdoubt;
+             document.getElementById("p3").innerHTML=sumdead;
+              document.getElementById("p4").innerHTML=sumcure;
               myEchart1.setOption({
                 title:{
                   text:'全国实时疫情数据分布图',
@@ -82,13 +129,11 @@
                 ],
                 tooltip:{
                   formatter : function(params) {
-                    console.log(params,'formatter');
                     return  "地区："+params.data.name+'<br/>'
                             +"确诊："+params.value+"人"+'<br/>'
                             +"治愈："+params.data.curedCount+"人"+'<br/>'
                             +"死亡："+params.data.deadCount+"人"+'<br/>'
                             +"疑似："+params.data.doubtCount+"人"
-
                   }//数据格式化
                 },
                 series:[
@@ -154,7 +199,7 @@
                   trigger: 'axis'
                 },
                 legend: {
-                  data: ['疑似感染人数', '确诊感染人数', '治愈人数', '死亡人数']
+                  data: [ '确诊感染人数', '治愈人数', '死亡人数']
                 },
                 grid: {
                   left: '3%',
@@ -170,39 +215,79 @@
                 xAxis: {
                   type: 'category',
                   boundaryGap: false,
-                  data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+
                 },
                 yAxis: {
                   type: 'value'
                 },
                 series: [
                   {
-                    name: '疑似感染人数',
-                    type: 'line',
-                    stack: '总量',
-                    data: [120, 132, 101, 134, 90, 230, 210]
-                  },
-                  {
                     name: '确诊感染人数',
                     type: 'line',
                     stack: '总量',
-                    data: [220, 182, 191, 234, 290, 330, 310]
+
                   },
                   {
                     name: '治愈人数',
                     type: 'line',
                     stack: '总量',
-                    data: [150, 232, 201, 154, 190, 330, 410]
+
                   },
                   {
                     name: '死亡人数',
                     type: 'line',
                     stack: '总量',
-                    data: [320, 332, 301, 334, 390, 330, 320]
+
                   }
                 ]
               })
+
             })
+    myEchart1.on('click',function (params) {
+      myEchart2.setOption({
+        xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: hubeidate
+        },
+        series: [
+          {
+            name: '确诊感染人数',
+            type: 'line',
+            stack: '总量',
+            data: hubeiconfirmCount
+          },
+          {
+            name: '治愈人数',
+            type: 'line',
+            stack: '总量',
+            data: hubeicuredCount
+          },
+          {
+            name: '死亡人数',
+            type: 'line',
+            stack: '总量',
+            data: hubeideadCount
+          }
+        ]
+      })
+      myEchart3.setOption({
+        series:[
+                {
+          data: [
+            {value: params.data.doubtCount, name: '疑似感染'},
+            {value: params.data.value, name: '确诊感染'},
+            {value: params.data.curedCount, name: '治愈'},
+            {value: params.data.deadCount, name: '死亡'}
+          ]
+        }
+        ]
+      })
+      document.getElementById("p1").innerHTML=params.data.value;
+      document.getElementById("p2").innerHTML=params.data.doubtCount
+      document.getElementById("p3").innerHTML=params.data.deadCount;
+      document.getElementById("p4").innerHTML=params.data.curedCount;
+    })
 
 
 
