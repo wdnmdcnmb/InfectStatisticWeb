@@ -36,11 +36,11 @@
 
 2.使用JAVA语言进行后端数据处理，丰富逻辑功能，自行处理日志文件
 
-
-4.通过JSON传递爬到的数据给echarts表格，实现数据动态更新
+3.通过JSON传递爬到的数据给echarts表格，实现数据动态更新
 #### 3.项目的运行:
 1.打开项目
 
 2.启动server目录下的index.js，若启动成功则会显示:当前服务器启动成功 http://localhost:8066/api/data
 
 3.启动index.js成功后，启动web目录下的index.jsp（部署在tomcat上）进行网页访问
+
