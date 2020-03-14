@@ -148,6 +148,8 @@
                   }
                 ]
               })
+
+
               myEchart3.setOption({
                 tooltip: {
                   trigger: 'item',
@@ -191,6 +193,8 @@
                   }
                 ]
               })
+
+
               myEchart2.setOption({
                 title: {
                   text: '折线图堆叠'
