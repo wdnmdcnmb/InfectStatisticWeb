@@ -1,0 +1,8 @@
+#忽略out文件内容
+/out/*
+#忽略.idea文件内容
+/.idea/*
+#忽略疫情日志文件内容
+/疫情日志/*
+#忽略InfectStatisticWeb.iml文件
+/InfectStatisticWeb.iml
