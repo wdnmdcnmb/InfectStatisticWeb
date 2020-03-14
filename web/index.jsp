@@ -17,16 +17,16 @@
     <link href="css/indexdiv.css" rel="stylesheet" type="text/css" />
     <style>
       .p1{
-        font-size: 27px;color: burlywood;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
+        font-size: 27px;color: #F74C31;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
       }
       .p2{
-        font-size: 27px;color: crimson;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
+        font-size: 27px;color: #A25A41;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
       }
       .p3{
         font-size: 27px;color: darkgoldenrod;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
       }
       .p4{
-        font-size: 27px;color: darksalmon;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
+        font-size: 27px;color: #28B7A3;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px
       }
     </style>
   </head>
@@ -38,12 +38,12 @@
   <div style="background-color: azure">
     <div style="width:50%;height: 100%;float: left;background-color: #c7dbff">
       <div style="width:100%;height: 15%">
-        <table style="margin:0 auto;background-color: blanchedalmond">
+        <table style="margin:0 auto;background-color: antiquewhite">
           <tr>
-            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: burlywood">现有确诊</p></td>
-            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: crimson">现有疑似</p></td>
+            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: #F74C31">现有确诊</p></td>
+            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: #A25A41">现有疑似</p></td>
             <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: darkgoldenrod">死亡人数</p></td>
-            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: darksalmon">治愈人数</p></td>
+            <td><p style="font-size: 27px;text-align: center;padding-bottom: 15px;padding-top: 15px;padding-left: 15px;padding-right: 15px;color: #28B7A3">治愈人数</p></td>
           </tr>
           <tr>
             <td><p id="p1" class="p1">123</p></td>
@@ -219,6 +219,7 @@
                 xAxis: {
                   type: 'category',
                   boundaryGap: false,
+                  data: hubeidate
 
                 },
                 yAxis: {
@@ -229,52 +230,26 @@
                     name: '确诊感染人数',
                     type: 'line',
                     stack: '总量',
-
+                    data: hubeiconfirmCount
                   },
                   {
                     name: '治愈人数',
                     type: 'line',
                     stack: '总量',
+                    data: hubeicuredCount
 
                   },
                   {
                     name: '死亡人数',
                     type: 'line',
                     stack: '总量',
-
+                    data: hubeideadCount
                   }
                 ]
               })
 
             })
     myEchart1.on('click',function (params) {
-      myEchart2.setOption({
-        xAxis: {
-          type: 'category',
-          boundaryGap: false,
-          data: hubeidate
-        },
-        series: [
-          {
-            name: '确诊感染人数',
-            type: 'line',
-            stack: '总量',
-            data: hubeiconfirmCount
-          },
-          {
-            name: '治愈人数',
-            type: 'line',
-            stack: '总量',
-            data: hubeicuredCount
-          },
-          {
-            name: '死亡人数',
-            type: 'line',
-            stack: '总量',
-            data: hubeideadCount
-          }
-        ]
-      })
       myEchart3.setOption({
         series:[
                 {
@@ -292,10 +267,6 @@
       document.getElementById("p3").innerHTML=params.data.deadCount;
       document.getElementById("p4").innerHTML=params.data.curedCount;
     })
-
-
-
-
   </script>
   </body>
 </html>
